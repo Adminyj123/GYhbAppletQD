@@ -1,0 +1,136 @@
+
+	/* // 测试用,完成删除 */
+	.bg-red-Test{
+		background-color: red;
+	}
+	.bg-orange-Test{
+		background-color: orange;
+	}
+	.bg-yellow-Test{
+		background-color: yellow;
+	}
+	.bg-green-Test{
+		background-color: green;
+	}
+	.bg-blue-Test{
+		background-color: blue;
+	}
+	.bg-pueple-Test{
+		background-color: purple;
+	}
+	/* //------------------ */
+	.bk-red-Test{
+		border:solid 1rpx red;
+	}
+	.bk-orange-Test{
+		border:solid 1rpx orange;
+	}
+	.bk-yellow-Test{
+		border:solid 1rpx yellow;
+	}
+	.bk-green-Test{
+		border:solid 1rpx green;
+	}
+	.bk-blue-Test{
+		border:solid 1rpx blue;
+	}
+	.bk-pueple-Test{
+		border:solid 1rpx purple;
+	}
+	/* //======测试结束，删除到此 */
+
+	.font-size-8 { 
+		font-size: 16rpx; 
+	}
+	.font-size-10 {
+		font-size: 20rpx;
+	}
+	.font-size-12 {
+		font-size: 24rpx;
+	}
+	.font-size-14 {
+		font-size: 28rpx;
+	}
+	.font-size-16 {
+		font-size: 32rpx;
+	}
+	.font-size-18 {
+		font-size: 36rpx;
+	}
+	.font-size-20 {
+		font-size: 40rpx;
+	}
+	.font-size-22 {
+		font-size: 44rpx;
+	}
+	.font-size-24 {
+		font-size: 48rpx;
+	}
+	.font-size-30 {
+		font-size: 60rpx;
+	}
+	
+
+	.arrow {
+		color: #999999;
+	}
+
+
+	
+	/* 该项目中的主题 颜色 */
+	/* .main-select-color{color:#F84408;} */
+	.main-select-color{color:#558FF2;} 
+	.main-default-color{color:#AC9D99;}
+	.main-emphasis-text-color{color:#483203}
+	
+
+	.common-bg {background-color: #f8f8f8;}
+	.common-bg-white {background-color: #ffffff;}
+	.hover-bg{background-color: #eeeeee;}
+	
+	/* // 国盈环保项目样式 */
+	/* // .color-483203 {color:#483203;} */
+	.color-A2AAB6 {color: #A2AAB6;}
+	.color-558FF2 {color: #558FF2;}
+
+	
+	.bg-F4F5F7 {background-color: #F4F5F7;}
+	.bg-fff {background-color: #FFFFFF;}
+	
+	
+	
+	/* 常用到的颜色样式 */
+	.color-000 {color: #000000;}
+	.color-333 {color: #333333;}
+	.color-666 {color: #666666;}
+	.color-999 {color: #999999;}
+	.color-fff {color: #ffffff;}
+	
+	.color-pink {color: #ff6699;}
+	.color-pink__deep {color: #ff3399;}
+	.color-pink__light {color: #ff66cc;}
+	.color-pink__light-1 {color: #ff9999;}
+	.color-purple {color: #cc66ff;}
+	.color-gray {color: #cccccc;}
+	.color-gray__light {color: #dedede;}
+	.color-gray__light-1 {color: #f8f8f8;}
+	.color-green {color: #00cc00;}
+	.color-red {color: #ff3300;}
+	
+	
+	
+	
+	/* 富文本*/
+	.rich-text video {
+		display: block;/*--- 此代码，可以去掉图片之间的空白间隔，*/
+		width: 100%;/*--- 图片宽度加以限制，避免超出屏幕，height:auto（默认）--- 高度自适应*/
+	}
+	
+	 
+	/* 超出隐藏 */
+	.overflow-hidden{
+		overflow: hidden;
+	}
+	
+
+

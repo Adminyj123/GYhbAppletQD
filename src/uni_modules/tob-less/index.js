@@ -1,0 +1,40 @@
+const appTheme = uni.getStorageSync('AppTheme') || ''
+
+// #ifdef VUE2
+import Vue from 'vue'
+const shared = Vue.observable({ appTheme })
+// #endif
+
+// #ifdef VUE3
+import { reactive } from 'vue'
+// #endif
+
+export default (V, options = {}) => {
+	const { initAppTheme = '' } = options
+	
+	// #ifdef VUE3
+	const shared = reactive({ appTheme })
+	// #endif
+	
+	shared.appTheme = shared.appTheme
+		? shared.appTheme
+		: initAppTheme
+
+	V.mixin({
+		computed: {
+			// app主题
+			AppTheme() {
+				const { appTheme } = shared
+				const AppTheme = appTheme ? `theme-${appTheme}` : ''
+				uni.setStorageSync('AppTheme', AppTheme)
+				return AppTheme
+			}
+		},
+		methods: {
+			// 切换app主题
+			ToggleAppTheme(t) {
+				shared.appTheme = t
+			}
+		}
+	})
+}

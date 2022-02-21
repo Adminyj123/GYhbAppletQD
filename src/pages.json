@@ -1,0 +1,74 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarTextStyle": "black" //导航栏标题颜色及状态栏前景颜色，仅支持 black/white(默认white)
+			}
+		},
+		{
+			"path": "pages/order/index",
+			"style": {
+				"navigationBarTitleText": "订单"
+			}
+		},
+		{
+			"path": "pages/store/index",
+			"style": {
+				"navigationBarTitleText": "商城"
+			}
+		},
+		{
+			"path": "pages/user/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/user/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	/*底部导航栏*/
+	"tabBar": {
+		"color": "#B5B5B5", //字体未选中的颜色
+		"selectedColor": "#558FF2", //字体选中状态的颜色
+		"borderStyle": "black", //底部导航的上边框线（只有黑白两种颜色）
+		"backgroundColor": "#FFFFFF", //底部背景色（最好加上，否则可能镂空）
+		"list": [{
+				"pagePath": "pages/index/index", //该导航栏项目对应的页面路径
+				"text": "首页",
+				"iconPath": "static/tabbar/main.png", //注意：使用的图片必须						
+				"selectedIconPath": "static/tabbar/main_select.png" //下载到本地
+			},
+			{
+				"pagePath": "pages/order/index", //该导航栏项目对应的页面路径
+				"text": "订单",
+				"iconPath": "static/tabbar/search.png",
+				"selectedIconPath": "static/tabbar/search_select.png"
+			},
+			{
+				"pagePath": "pages/store/index", //该导航栏项目对应的页面路径
+				"text": "商城",
+				"iconPath": "static/tabbar/bookm.png",
+				"selectedIconPath": "static/tabbar/bookm_select.png"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"text": "我的",
+				"iconPath": "static/tabbar/my.png",
+				"selectedIconPath": "static/tabbar/my_select.png"
+			}
+		]
+	}
+}

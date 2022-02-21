@@ -1,0 +1,516 @@
+/* sm=s=small,表示小号    md=m=middle,表示中号    lg=l=large,表示大号    big,表示超大的 */
+/* scroll-view */
+.scroll-row{ width: 100%;white-space: nowrap; }
+.scroll-row-item{ display: inline-block; }
+
+body{
+	--primary:#007bff;
+	--secondary: #6c757d;
+	--success: #28a745;
+	--danger: #dc3545;
+	--warning: #ffc107;
+	--info: #17a2b8;
+	--light: #f8f9fa;
+	--dark: #343a40;
+	--muted: #6c757d;
+	--white: #fff;
+	--borderColor:#dee2e6;
+	--lightmuted:#B2B2B2;
+}
+
+/* 防止图片闪一下 */
+image{will-change: transform}
+
+/* 阴影 */
+.shadow-sm {
+    box-shadow: 0 2rpx 4rpx rgba(114, 130, 138, 0.2)!important;
+}
+.shadow {
+    box-shadow: 0 8rpx 16rpx rgba(114, 130, 138, 0.2)!important;
+}
+.shadow-lg {
+    box-shadow: 0 16rpx 48rpx rgba(114, 130, 138, 0.2)!important;
+}
+
+
+/* 定位 */
+.position-absolute{ position: absolute; }
+.position-fixed{ position: fixed; }
+.position-relative{ position: relative; }
+.left-0{ left: 0; }
+.top-0{ top: 0; }
+.bottom-0{ bottom: 0; }
+.right-0{ right: 0; }
+
+/* 宽高 */
+.w-750{width:750rpx}
+.w-100{ width: 100%;}
+.w-50{ width: 50%;}
+.h-100{ height: 1250rpx;}
+.h-50{ height: 625rpx; }
+
+/* 字体 */
+.font{ font-size: 25rpx; }
+.font-sm{ font-size: 22rpx; }
+.font-md{ font-size: 30rpx; }
+.font-lg{ font-size: 40rpx; }
+.font-big{ font-size: 60rpx; }
+.font-weight{ font-weight: bold!important; }
+.font-weight-normal {font-weight: normal;}/* normal 	默认值。定义标准的字符。 */
+.font-weight-100{ font-weight: 100!important; }/* 定义由粗到细的字符(100-900)。400 等同于 normal，而 700 等同于 bold。 */
+/* 行高,全局行高好像为1.8 */
+.line-h0{ line-height: 0!important; }
+.line-h{ line-height: 1!important; }
+.line-h-sm{ line-height: 1.2!important; }
+.line-h-md{ line-height: 1.5!important; }
+.line-h-lg{ line-height: 2!important; }
+.line-h-big{ line-height: 3!important; }
+
+/* 文本中间的上中下划线 */
+.td-overline{ text-decoration: overline; }
+.td-line-through{ text-decoration: line-through; }
+.td-underline{ text-decoration: underline; }
+
+/* text-align 指定元素文本的水平对齐方式 默认为left   justify实现两端对齐文本效果(基本没见过用)。*/
+.text-center{ text-align: center; }
+.text-left{ text-align: left; }
+.text-right{ text-align: right; }
+/* 设置当字符串过长时，允许在单词内断行–断行发生在单词的空白处 */
+.text-overflow-breakword {overflow-wrap: break-word;}/* normal 允许内容顶开或溢出指定的容器边界。行只能在正常的单词断点处中断。（例如两个单词之间的空格）。 */
+.text-overflow-normal {overflow-wrap: normal;}/* break-word 内容将在边界内换行。如果行内没有多余的地方容纳该单词到结尾，则会将单词强制分割换行。 */
+/* 字体间距 */
+.letter-5 {letter-spacing: 10rpx; }
+.letter-10 {letter-spacing: 20rpx; }
+/* 字体只允许一行,超出部分隐藏,以...的形式展示 */
+.line-1 {
+	overflow: hidden;
+	word-break: break-all;/* break-all(允许在单词内换行。) */
+	text-overflow: ellipsis; /* 超出部分省略号 */
+	display: -webkit-box;/** 对象作为伸缩盒子模型显示 **/
+	-webkit-box-orient: vertical;/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+	-webkit-line-clamp: 1;/** 显示的行数 **/
+}
+/* 字体只允许两行,超出部分隐藏,以...的形式展示 */
+.line-2 {
+	overflow: hidden;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+/* 字体只允许三行,超出部分隐藏,以...的形式展示 */
+.line-3 {
+	overflow: hidden;
+	word-break: breaall;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical; 
+	-webkit-line-clamp: 3;
+}
+
+
+/* 布局 */
+[class*='col-'],[class*='span-'],[class*='span24-'] { min-height: 1px;box-sizing: border-box!important;}
+/* 栅栏一 */
+.col-1{ width: 62.5rpx; } 
+.col-2{ width: 125rpx; } 
+.col-3{ width: 187.5rpx; } 
+.col-4{ width: 250rpx;} 
+.col-5{ width: 312.5rpx; } 
+.col-6{ width: 375rpx; }
+.col-7{ width: 437.5rpx; }
+.col-8{ width: 500rpx; }
+.col-9{ width: 562.5rpx; }
+.col-10{ width: 625rpx; }
+.col-11{ width: 687.5rpx; }
+.col-12{ width: 750rpx; }
+/* 栅栏二 */
+.span-1{ width: 5%; } 
+.span-2{ width: 10%; } 
+.span-3{ width: 15%; } 
+.span-4{ width: 20%;} 
+.span-5{ width: 25%; } 
+.span-6{ width: 30%; }
+.span-7{ width: 35%; }
+.span-8{ width: 40%; }
+.span-9{ width: 45%; }
+.span-10{ width: 50%; }
+.span-11{ width: 55%; }
+.span-12{ width: 60%; }
+.span-13{ width: 65%; }
+.span-14{ width: 70%; }
+.span-15{ width: 75%; }
+.span-16{ width: 80%; }
+.span-17{ width: 85%; }
+.span-18{ width: 90%; }
+.span-19{ width: 95%; }
+.span-20{ width: 100%; }
+/* 栅栏三 */
+.span24-1{ width: 4.17%; } 
+.span24-2{ width: 8.33%; } 
+.span24-3{ width: 12.5%; } 
+.span24-4{ width: 16.67%;} 
+.span24-5{ width: 20.83%; } 
+.span24-6{ width: 25%; }
+.span24-7{ width: 29.17%; }
+.span24-8{ width: 33.33%; }
+.span24-9{ width: 37.5%; }
+.span24-10{ width: 41.67%; }
+.span24-11{ width: 45.83%; }
+.span24-12{ width: 50%; }
+.span24-13{ width: 54.17%; }
+.span24-14{ width: 58.33%; }
+.span24-15{ width: 62.5%; }
+.span24-16{ width: 66.67%; }
+.span24-17{ width: 70.83%; }
+.span24-18{ width: 75%; }
+.span24-19{ width: 79.17%; }
+.span24-20{ width: 83.33%; }
+.span24-21{ width: 87.5%; }
+.span24-22{ width: 91.67%; }
+.span24-23{ width: 95.83%; }
+.span24-24{ width: 100%; }
+
+
+/* 布局 */
+.d-flex{ display: flex; }/* 默认为row, */
+.d-block{ display: block; }/* 此元素将显示为块级元素，此元素前后会带有换行符。 */
+.d-inline-block{ display: inline-block; } 	/* 行内块元素。 */
+/* flex 弹性布局 */
+.row { box-sizing: border-box!important; display: flex!important; flex-direction: row; flex-wrap: wrap;}
+.flex-1{ flex: 1; }/* flex属性是flex-grow, flex-shrink 和 flex-basis的简写，flex:1等同于 1 1 0写法 */
+.flex-row{display: flex; flex-direction: row; }/* 主轴为水平方向，起点在左端。 */
+.flex-col{display: flex; flex-direction: column; }/* 主轴为垂直方向，起点在上沿。 */
+.flex-wrap{ flex-wrap: wrap; }/* 换行，第一行在上方。 */
+.flex-nowrap{ flex-wrap: nowrap; }/* （默认）,不换行。 */
+.flex-shrink{flex-shrink: 0;}/* 项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。 负值对该属性无效。*/
+.flex-center{display: flex; justify-content: center;align-items:center;} /* Flex布局中水平锤子居中 */
+/* 项目在主轴上的对齐方式(假设主轴为从左到右), */
+.j-start{ justify-content: flex-start; }/* 左对齐 */
+.j-center{ justify-content: center; }/* 居中 */
+.j-end{ justify-content: flex-end; }/* 右对齐 */
+.j-sb{ justify-content: space-between; }/* 两端对齐，项目之间的间隔都相等。 */
+.j-sa{ justify-content: space-around; }/* 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。 */
+/* 项目在交叉轴上的对齐方式(假设交叉轴从上到下), */
+.a-center{ align-items:center; }/* 交叉轴的起点对齐。 */
+.a-start{ align-items: flex-start; }/* 交叉轴的终点对齐。 */
+.a-end{ align-items:flex-end; }/* 交叉轴的中点对齐。 */
+.a-baseline{ align-items:baseline }/* 项目的第一行文字的基线对齐。 */
+.a-stretch{ align-items: stretch; }/*（默认值）,如果项目未设置高度或设为auto，将占满整个容器的高度。 */
+/* align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。除了auto，其他都与align-items属性完全一致。 */
+.a-self-auto{ align-self: auto; }
+.a-self-start{ align-self: flex-start; }
+.a-self-end{ align-self: flex-end; }
+.a-self-baseline{ align-self:baseline; }
+.a-self-stretch{ align-self:stretch; }
+
+
+/* 边框线 (必须配合下面的边框线颜色使用可以覆盖这个#dee2e6颜色)  --borderColor:#dee2e6; */
+.border{ border-width: 1rpx; border-style: solid; border-color: var(--borderColor);}
+.border-top{ border-top-width: 1rpx; border-top-style: solid; border-top-color: var(--borderColor); }
+.border-right{ border-right-width: 1rpx; border-right-style: solid; border-right-color: var(--borderColor);}
+.border-bottom{ border-bottom-width: 1rpx;border-bottom-style: solid;border-bottom-color:var(--borderColor);}
+.border-left{ border-left-width: 1rpx;border-left-style: solid;border-left-color:var(--borderColor);}
+/* 取消边框线 */
+.border-0{ border-width: 0; }
+.border-top-0{ border-top-width: 0; }
+.border-right-0{ border-right-width: 0; }
+.border-bottom-0{ border-bottom-width: 0; }
+.border-left-0{ border-left-width: 0; }
+/* 边框线颜色 */
+.border-primary{ border-color: var(--primary)!important }
+.border-secondary{ border-color:var(--secondary)!important }
+.border-success{ border-color: var(--success)!important }
+.border-danger{ border-color: var(--danger)!important }
+.border-warning{ border-color:var(--warning)!important }
+.border-info{ border-color: var(--info)!important }
+.border-light{ border-color: var(--light)!important }
+.border-dark{ border-color: var(--dark)!important }
+.border-white{ border-color: var(--white)!important }
+.border-light-secondary{border-color: #F1F1F1!important;}
+/* 为元素添加圆角边框 */
+.b-radius-5{ border-radius: 5rpx; }
+.b-radius-10{ border-radius: 10rpx; }
+.b-radius-15{ border-radius: 15rpx; }
+.rounded-circle{ border-radius:100%; }/* 半圆 ellipse*/
+.b-radius-0{ border-radius:0; }/* 默认 直角，无圆角*/
+.b-radius-circle {border-radius: 50%;}/*圆*/
+
+/*字体颜色 color */
+.text-primary{ color:var(--primary)!important; }
+.text-secondary{ color:var(--secondary)!important; }
+.text-success{ color:var(--success)!important; }
+.text-danger{ color: var(--danger)!important; }
+.text-warning{ color:var(--warning)!important; }
+.text-info{ color: var(--info)!important; }
+.text-light{ color: var(--light)!important; }
+.text-dark{ color: var(--dark)!important; }
+.text-muted{ color: var(--muted)!important; }
+.text-light-muted{ color: var(--lightmuted)!important; }
+.text-white{ color: var(--white)!important; }
+
+/* 背景颜色 */
+.bg-primary{ background-color:var(--primary)!important; }
+.bg-secondary{ background-color:var(--secondary)!important; }
+.bg-success{ background-color:var(--success)!important; }
+.bg-danger{ background-color: var(--danger)!important; }
+.bg-warning{ background-color:var(--warning)!important; }
+.bg-info{ background-color: var(--info)!important; }
+.bg-light{ background-color: var(--light)!important; }
+.bg-dark{ background-color: var(--dark)!important; }
+.bg-white{ background-color: var(--white)!important; }
+.bg-light-secondary{background-color: #F1F1F1!important; }/*配合hover-class="bg-light-secondary" 点击后有个淡淡的灰色点击效果 */
+
+
+/* margin外边距属性 负值是允许的。*/
+.m-0 { margin-left: 0;margin-right: 0;margin-top: 0;margin-bottom: 0;}
+.m-5 { margin-left: 5rpx;margin-right: 5rpx;margin-top: 5rpx;margin-bottom: 5rpx;}
+.m-10 { margin-left: 10rpx;margin-right: 10rpx;margin-top: 10rpx;margin-bottom: 10rpx;}
+.m-15 { margin-left: 15rpx;margin-right: 15rpx;margin-top: 15rpx;margin-bottom: 15rpx;}
+.m-20 { margin-left: 20rpx;margin-right: 20rpx;margin-top: 20rpx;margin-bottom: 20rpx;}
+.m-25 { margin-left: 25rpx;margin-right: 25rpx;margin-top: 25rpx;margin-bottom: 25rpx;}
+.m-30 { margin-left: 30rpx;margin-right: 30rpx;margin-top: 30rpx;margin-bottom: 30rpx;}
+.m-35 { margin-left: 35rpx;margin-right: 35rpx;margin-top: 35rpx;margin-bottom: 35rpx;}
+.m-40 { margin-left: 40rpx;margin-right: 40rpx;margin-top: 40rpx;margin-bottom: 40rpx;}
+.m-45 { margin-left: 45rpx;margin-right: 45rpx;margin-top: 45rpx;margin-bottom: 45rpx;}
+.m-50 { margin-left: 50rpx;margin-right: 50rpx;margin-top: 50rpx;margin-bottom: 50rpx;}
+.m-60 { margin-left: 60rpx;margin-right: 60rpx;margin-top: 60rpx;margin-bottom: 60rpx;}
+.m-70 { margin-left: 70rpx;margin-right: 70rpx;margin-top: 70rpx;margin-bottom: 70rpx;}
+.m-70 { margin-left: 70rpx;margin-right: 70rpx;margin-top: 70rpx;margin-bottom: 70rpx;}
+.m-80 { margin-left: 80rpx;margin-right: 80rpx;margin-top: 80rpx;margin-bottom: 80rpx;}
+.m-90 { margin-left: 90rpx;margin-right: 90rpx;margin-top: 90rpx;margin-bottom: 90rpx;}
+.m-100 { margin-left: 100rpx;margin-right: 100rpx;margin-top: 100rpx;margin-bottom: 100rpx;}
+/* margin左右外边距 负值是允许的。*/
+.mx-0 { margin-left: 0;margin-right: 0;}
+.mx-auto { margin-left: auto;margin-right: auto;}
+.mx-5 { margin-left: 5rpx;margin-right: 5rpx;}
+.mx-10 { margin-left: 10rpx;margin-right: 10rpx;}
+.mx-15 { margin-left: 15rpx;margin-right: 15rpx;}
+.mx-20 { margin-left: 20rpx;margin-right: 20rpx;}
+.mx-25 { margin-left: 25rpx;margin-right: 25rpx;}
+.mx-30 { margin-left: 30rpx;margin-right: 30rpx;}
+.mx-35 { margin-left: 35rpx;margin-right: 35rpx;}
+.mx-40 { margin-left: 40rpx;margin-right: 40rpx;}
+.mx-45 { margin-left: 45rpx;margin-right: 45rpx;}
+.mx-50 { margin-left: 50rpx;margin-right: 50rpx;}
+.mx-60 { margin-left: 60rpx;margin-right: 60rpx;}
+.mx-70 { margin-left: 70rpx;margin-right: 70rpx;}
+.mx-80 { margin-left: 80rpx;margin-right: 80rpx;}
+.mx-90 { margin-left: 90rpx;margin-right: 90rpx;}
+.mx-100 { margin-left: 100rpx;margin-right: 100rpx;}
+/* margin上下外边距 负值是允许的。*/
+.my-0 { margin-top: 0;margin-bottom: 0;}
+.my-5 { margin-top: 5rpx;margin-bottom: 5rpx;}
+.my-10 { margin-top: 10rpx;margin-bottom: 10rpx;}
+.my-15 { margin-top: 15rpx;margin-bottom: 15rpx;}
+.my-20 { margin-top: 20rpx;margin-bottom: 20rpx;}
+.my-25 { margin-top: 25rpx;margin-bottom: 25rpx;}
+.my-30 { margin-top: 30rpx;margin-bottom: 30rpx;}
+.my-35 { margin-top: 35rpx;margin-bottom: 35rpx;}
+.my-40 { margin-top: 40rpx;margin-bottom: 40rpx;}
+.my-45 { margin-top: 45rpx;margin-bottom: 45rpx;}
+.my-50 { margin-top: 50rpx;margin-bottom: 50rpx;}
+.my-60 { margin-top: 60rpx;margin-bottom: 60rpx;}
+.my-70 { margin-top: 70rpx;margin-bottom: 70rpx;}
+.my-80 { margin-top: 80rpx;margin-bottom: 80rpx;}
+.my-90 { margin-top: 90rpx;margin-bottom: 90rpx;}
+.my-100 { margin-top: 100rpx;margin-bottom: 100rpx;}
+/* margin上外边距 负值是允许的。*/
+.mt-0 { margin-top: 0;}
+.mt-auto { margin-top: auto;}
+.mt-5 { margin-top: 5rpx;}
+.mt-10 { margin-top: 10rpx;}
+.mt-15 { margin-top: 15rpx;}
+.mt-20 { margin-top: 20rpx;}
+.mt-25 { margin-top: 25rpx;}
+.mt-30 { margin-top: 30rpx;}
+.mt-35 { margin-top: 35rpx;}
+.mt-40 { margin-top: 40rpx;}
+.mt-45 { margin-top: 45rpx;}
+.mt-50 { margin-top: 50rpx;}
+.mt-60 { margin-top: 60rpx;}
+.mt-70 { margin-top: 70rpx;}
+.mt-80 { margin-top: 80rpx;}
+.mt-90 { margin-top: 90rpx;}
+.mt-100 { margin-top: 100rpx;}
+/* margin下外边距 负值是允许的。*/
+.mb-0 { margin-bottom: 0;}
+.mb-auto { margin-bottom: auto;}
+.mb-5 { margin-bottom: 5rpx;}
+.mb-10 { margin-bottom: 10rpx;}
+.mb-15 { margin-bottom: 15rpx;}
+.mb-20 { margin-bottom: 20rpx;}
+.mb-25 { margin-bottom: 25rpx;}
+.mb-30 { margin-bottom: 30rpx;}
+.mb-35 { margin-bottom: 35rpx;}
+.mb-40 { margin-bottom: 40rpx;}
+.mb-45 { margin-bottom: 45rpx;}
+.mb-50 { margin-bottom: 50rpx;}
+.mb-60 { margin-bottom: 60rpx;}
+.mb-70 { margin-bottom: 70rpx;}
+.mb-80 { margin-bottom: 80rpx;}
+.mb-90 { margin-bottom: 90rpx;}
+.mb-100 { margin-bottom: 100rpx;}
+/* margin左外边距 负值是允许的。*/
+.ml-0 { margin-left: 0;}
+.ml-auto { margin-left: auto;}
+.ml-5 { margin-left: 5rpx;}
+.ml-10 { margin-left: 10rpx;}
+.ml-15 { margin-left: 15rpx;}
+.ml-20 { margin-left: 20rpx;}
+.ml-25 { margin-left: 25rpx;}
+.ml-30 { margin-left: 30rpx;}
+.ml-35 { margin-left: 35rpx;}
+.ml-40 { margin-left: 40rpx;}
+.ml-45 { margin-left: 45rpx;}
+.ml-50 { margin-left: 50rpx;}
+.ml-60 { margin-left: 60rpx;}
+.ml-70 { margin-left: 70rpx;}
+.ml-80 { margin-left: 80rpx;}
+.ml-90 { margin-left: 90rpx;}
+.ml-100 { margin-left: 100rpx;}
+/* margin右外边距 负值是允许的。*/
+.mr-0 { margin-right: 0;}
+.mr-5 { margin-right: 5rpx;}
+.mr-10 { margin-right: 10rpx;}
+.mr-15 { margin-right: 15rpx;}
+.mr-20 { margin-right: 20rpx;}
+.mr-25 { margin-right: 25rpx;}
+.mr-30 { margin-right: 30rpx;}
+.mr-35 { margin-right: 35rpx;}
+.mr-40 { margin-right: 40rpx;}
+.mr-45 { margin-right: 45rpx;}
+.mr-50 { margin-right: 50rpx;}
+.mr-60 { margin-right: 60rpx;}
+.mr-70 { margin-right: 70rpx;}
+.mr-80 { margin-right: 80rpx;}
+.mr-90 { margin-right: 90rpx;}
+.mr-100 { margin-right: 100rpx;}
+
+
+/* padding内部填充  负值是不允许的。 */
+.bs-box{ box-sizing: border-box;}
+.p-0 {padding-left: 0;padding-right: 0;padding-top: 0;padding-bottom: 0;}
+.p-5 {padding-left: 5rpx;padding-right: 5rpx;padding-top: 5rpx;padding-bottom: 5rpx;}
+.p-10 {padding-left: 10rpx;padding-right: 10rpx;padding-top: 10rpx;padding-bottom: 10rpx;}
+.p-15 {padding-left: 15rpx;padding-right: 15rpx;padding-top: 15rpx;padding-bottom: 15rpx;}
+.p-20 {padding-left: 20rpx;padding-right: 20rpx;padding-top: 20rpx;padding-bottom: 20rpx;}
+.p-25 {padding-left: 25rpx;padding-right: 25rpx;padding-top: 25rpx;padding-bottom: 25rpx;}
+.p-30 {padding-left: 30rpx;padding-right: 30rpx;padding-top: 30rpx;padding-bottom: 30rpx;}
+.p-35 {padding-left: 35rpx;padding-right: 35rpx;padding-top: 35rpx;padding-bottom: 35rpx;}
+.p-40 {padding-left: 40rpx;padding-right: 40rpx;padding-top: 40rpx;padding-bottom: 40rpx;}
+.p-45 {padding-left: 45rpx;padding-right: 45rpx;padding-top: 45rpx;padding-bottom: 45rpx;}
+.p-50 {padding-left: 50rpx;padding-right: 50rpx;padding-top: 50rpx;padding-bottom: 50rpx;}
+.p-60 {padding-left: 60rpx;padding-right: 60rpx;padding-top: 60rpx;padding-bottom: 60rpx;}
+.p-70 {padding-left: 70rpx;padding-right: 70rpx;padding-top: 70rpx;padding-bottom: 70rpx;}
+.p-80 {padding-left: 80rpx;padding-right: 80rpx;padding-top: 80rpx;padding-bottom: 80rpx;}
+.p-90 {padding-left: 90rpx;padding-right: 90rpx;padding-top: 90rpx;padding-bottom: 90rpx;}
+.p-100 {padding-left: 100rpx;padding-right: 100rpx;padding-top: 100rpx;padding-bottom: 100rpx;}
+/* padding左右内部填充  负值是不允许的。 */
+.px-0 { padding-left: 0;padding-right: 0;}
+.px-5 { padding-left: 5rpx;padding-right: 5rpx;}
+.px-10 { padding-left: 10rpx;padding-right: 10rpx;}
+.px-15 { padding-left: 15rpx;padding-right: 15rpx;}
+.px-20 { padding-left: 20rpx;padding-right: 20rpx;}
+.px-25 { padding-left: 25rpx;padding-right: 25rpx;}
+.px-30 { padding-left: 30rpx;padding-right: 30rpx;}
+.px-35 { padding-left: 35rpx;padding-right: 35rpx;}
+.px-40 { padding-left: 40rpx;padding-right: 40rpx;}
+.px-45 { padding-left: 45rpx;padding-right: 45rpx;}
+.px-50 { padding-left: 50rpx;padding-right: 50rpx;}
+.px-60 { padding-left: 60rpx;padding-right: 60rpx;}
+.px-70 { padding-left: 70rpx;padding-right: 70rpx;}
+.px-80 { padding-left: 80rpx;padding-right: 80rpx;}
+.px-90 { padding-left: 90rpx;padding-right: 90rpx;}
+.px-100 { padding-left: 100rpx;padding-right: 100rpx;}
+/* padding上下内部填充  负值是不允许的。 */
+.py-0 { padding-top: 0;padding-bottom: 0;}
+.py-5 { padding-top: 5rpx;padding-bottom: 5rpx;}
+.py-10 { padding-top: 10rpx;padding-bottom: 10rpx;}
+.py-15 { padding-top: 15rpx;padding-bottom: 15rpx;}
+.py-20 { padding-top: 20rpx;padding-bottom: 20rpx;}
+.py-25 { padding-top: 25rpx;padding-bottom: 25rpx;}
+.py-30 { padding-top: 30rpx;padding-bottom: 30rpx;}
+.py-35 { padding-top: 35rpx;padding-bottom: 35rpx;}
+.py-40 { padding-top: 40rpx;padding-bottom: 40rpx;}
+.py-45 { padding-top: 45rpx;padding-bottom: 45rpx;}
+.py-50 { padding-top: 50rpx;padding-bottom: 50rpx;}
+.py-60 { padding-top: 60rpx;padding-bottom: 60rpx;}
+.py-70 { padding-top: 70rpx;padding-bottom: 70rpx;}
+.py-80 { padding-top: 80rpx;padding-bottom: 80rpx;}
+.py-90 { padding-top: 90rpx;padding-bottom: 90rpx;}
+.py-100 { padding-top: 100rpx;padding-bottom: 100rpx;}
+/* padding上内部填充  负值是不允许的。 */
+.pt-0 { padding-top: 0;}
+.pt-5 { padding-top: 5rpx;}
+.pt-10 { padding-top: 10rpx;}
+.pt-15 { padding-top: 15rpx;}
+.pt-20 { padding-top: 20rpx;}
+.pt-25 { padding-top: 25rpx;}
+.pt-30 { padding-top: 30rpx;}
+.pt-35 { padding-top: 35rpx;}
+.pt-40 { padding-top: 40rpx;}
+.pt-45 { padding-top: 45rpx;}
+.pt-50 { padding-top: 50rpx;}
+.pt-60 { padding-top: 60rpx;}
+.pt-70 { padding-top: 70rpx;}
+.pt-80 { padding-top: 80rpx;}
+.pt-90 { padding-top: 90rpx;}
+.pt-100 { padding-top: 100rpx;}
+/* padding下内部填充  负值是不允许的。 */
+.pb-0 { padding-bottom: 0;}
+.pb-5 { padding-bottom: 5rpx;}
+.pb-10 { padding-bottom: 10rpx;}
+.pb-15 { padding-bottom: 15rpx;}
+.pb-20 { padding-bottom: 20rpx;}
+.pb-25 { padding-bottom: 25rpx;}
+.pb-30 { padding-bottom: 30rpx;}
+.pb-35 { padding-bottom: 35rpx;}
+.pb-40 { padding-bottom: 40rpx;}
+.pb-45 { padding-bottom: 45rpx;}
+.pb-50 { padding-bottom: 50rpx;}
+.pb-60 { padding-bottom: 60rpx;}
+.pb-70 { padding-bottom: 70rpx;}
+.pb-80 { padding-bottom: 80rpx;}
+.pb-90 { padding-bottom: 90rpx;}
+.pb-100 { padding-bottom: 100rpx;}
+/* padding左内部填充  负值是不允许的。 */
+.pl-0 { padding-left: 0;}
+.pl-5 { padding-left: 5rpx;}
+.pl-10 { padding-left: 10rpx;}
+.pl-15 { padding-left: 15rpx;}
+.pl-20 { padding-left: 20rpx;}
+.pl-25 { padding-left: 25rpx;}
+.pl-30 { padding-left: 30rpx;}
+.pl-45 { padding-left: 45rpx;}
+.pl-40 { padding-left: 40rpx;}
+.pl-55 { padding-left: 55rpx;}
+.pl-50 { padding-left: 50rpx;}
+.pl-60 { padding-left: 60rpx;}
+.pl-70 { padding-left: 70rpx;}
+.pl-80 { padding-left: 80rpx;}
+.pl-90 { padding-left: 90rpx;}
+.pl-100 { padding-left: 100rpx;}
+/* padding右内部填充  负值是不允许的。 */
+.pr-0 { padding-right: 0;}
+.pr-5 { padding-right: 5rpx;}
+.pr-10 { padding-right: 10rpx;}
+.pr-15 { padding-right: 15rpx;}
+.pr-20 { padding-right: 20rpx;}
+.pr-25 { padding-right: 25rpx;}
+.pr-30 { padding-right: 30rpx;}
+.pr-35 { padding-right: 35rpx;}
+.pr-40 { padding-right: 40rpx;}
+.pr-45 { padding-right: 45rpx;}
+.pr-50 { padding-right: 50rpx;}
+.pr-60 { padding-right: 60rpx;}
+.pr-70 { padding-right: 70rpx;}
+.pr-80 { padding-right: 80rpx;}
+.pr-90 { padding-right: 90rpx;}
+.pr-100 { padding-right: 100rpx;}
+
+.overflow-hidden{
+	overflow: hidden;
+}
